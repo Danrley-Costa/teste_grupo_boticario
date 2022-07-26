@@ -1,12 +1,10 @@
 {
     "check-coverage": true,
     "extention": [".js"],
-    "exclude": [
-        "test"
-      ],
-      "branches": 0,
-      "lines": 0,
-      "functions": 0,
-      "statements": 0,
-      "reporter": ["lcov","html","text", "text-summary"]
+    "exclude": ["test"],
+    "branches": 0,
+    "lines": 0,
+    "functions": 0,
+    "statements": 0,
+    "reporter": ["lcov", "html", "text", "text-summary"]
 }
