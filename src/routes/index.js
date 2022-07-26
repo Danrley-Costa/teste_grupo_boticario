@@ -20,7 +20,7 @@ const routes = (router) => {
     registerSaleController,
   );
 
-  router.get('/login', login);
+  router.post('/login', login);
   router.get('/cashback', getAccumulatedCashback);
   router.get('/list_purchases', listPurchasesController);
 };
