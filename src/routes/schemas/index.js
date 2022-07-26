@@ -1,4 +1,4 @@
-const retailerSchema = require("./retailer")
-const saleSchema = require("./sale")
+const retailerSchema = require('./retailer');
+const saleSchema = require('./sale');
 
-module.exports = {retailerSchema, saleSchema}
+module.exports = { retailerSchema, saleSchema };

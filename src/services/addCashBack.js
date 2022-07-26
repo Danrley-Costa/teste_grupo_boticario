@@ -1,14 +1,16 @@
-require('dotenv').config()
-const {formatData} = require("./utils")
+require('dotenv').config();
+const { formatData } = require('./utils');
 const moment = require('moment');
 
-const addCashBack = async (sales) => {
-  const array = await formatData(sales)
-  const nowData = moment().format("MM-YYYY")
-  const filtrados = array.filter((item) => item.month === nowData);
-  const cashback = filtrados.map(item => item.cashback).reduce((prev, curr) => prev + curr, 0);
-  const cashAdd = {...array, cashback}   
-  return cashAdd
-}
+const addCashBack = async sales => {
+    const array = await formatData(sales);
+    const nowData = moment().format('MM-YYYY');
+    const filtrados = array.filter(item => item.month === nowData);
+    const cashback = filtrados
+        .map(item => item.cashback)
+        .reduce((prev, curr) => prev + curr, 0);
+    const cashAdd = { ...array, cashback };
+    return cashAdd;
+};
 
-module.exports = {addCashBack}
+module.exports = { addCashBack };

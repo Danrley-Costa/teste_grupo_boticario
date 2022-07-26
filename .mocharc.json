@@ -2,5 +2,5 @@
     "reporter": "spec",
     "exit": true,
     "ui": "bdd",
-    "recursive":true
+    "recursive": true
 }

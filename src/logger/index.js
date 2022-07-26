@@ -1,6 +1,5 @@
-
-require('dotenv').config()
-const pino = require("pino")({
+require('dotenv').config();
+const pino = require('pino')({
     level: process.env.LEVEL,
     transport: {
         target: 'pino-pretty',
@@ -8,8 +7,8 @@ const pino = require("pino")({
             colorize: true,
             levelFirst: true,
             translateTime: true,
-        }
+        },
     },
-})
+});
 
-module.exports = pino
+module.exports = pino;
