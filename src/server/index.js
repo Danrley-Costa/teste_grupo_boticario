@@ -5,39 +5,35 @@ const routes = require('../routes');
 const port = process.env.PORT;
 
 const server = (() => {
-    const router = new express.Router();
-    const app = express();
-    let serverProcess;
+  const router = new express.Router();
+  const app = express();
+  let serverProcess;
 
-    const start = () =>
-        new Promise(resolve => {
-            routes(router);
+  const start = () => new Promise((resolve) => {
+    routes(router);
 
-            app.set('port', port);
-            app.use(express.json());
-            app.use('/', router);
+    app.set('port', port);
+    app.use(express.json());
+    app.use('/', router);
 
-            serverProcess = app.listen(port, () => {
-                return resolve(app);
-            });
-        });
+    serverProcess = app.listen(port, () => resolve(app));
+  });
 
-    const stop = () =>
-        new Promise((resolve, reject) => {
-            if (serverProcess) {
-                serverProcess.close(err => {
-                    if (err) {
-                        return reject(err);
-                    }
-                    return resolve();
-                });
-            }
-        });
+  const stop = () => new Promise((resolve, reject) => {
+    if (serverProcess) {
+      serverProcess.close((err) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve();
+      });
+    }
+  });
 
-    return {
-        start,
-        stop,
-    };
+  return {
+    start,
+    stop,
+  };
 })();
 
 module.exports = server;

@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "test": "npx prettier --write --ignore-unknown . && mocha"
+        "prettier": "npx prettier --write --ignore-unknown .",
+        "test": "npx eslint --fix src --ext .js && mocha"
     },
     "keywords": [],
     "author": "",
@@ -29,6 +30,9 @@
         "supertest": "^6.2.4"
     },
     "devDependencies": {
+        "eslint": "^8.20.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
         "nock": "^13.2.9",
         "nodemon": "^2.0.19",
         "pino-pretty": "^8.1.0",
