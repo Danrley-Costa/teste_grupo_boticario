@@ -16,7 +16,6 @@ describe("Create retailer integration test", () => {
     })
 
     afterEach(async () => {
-        sinon.restore();
         dropCollection('retailers')
     })
 
