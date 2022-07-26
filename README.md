@@ -127,9 +127,9 @@ Listar cashback acumulado de cada cpf:
 curl --request GET \
   --url http://localhost:3000/cashback \
   --header 'Content-Type: application/json' \
-  --header 'x-acces-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjJkZWNlMmEyNzEwNmQ3ZWZhYzg5OTFkIiwiaWF0IjoxNjU4NzgzNzA1LCJleHAiOjE2NTg3ODY3MDV9.ZFsqq6P2ngKNlwyR27HI-kGAP6nenFz59SKkG4Q1Rfg' \
+  --header 'x-acces-token: <token gerado ao fazer o login>' \
   --data '{
-	"cpf":"608747603"
+	"cpf":"cpf do revendedor"
 }'
 
 ```
