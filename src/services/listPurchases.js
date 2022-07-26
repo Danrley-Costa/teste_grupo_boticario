@@ -1,13 +1,19 @@
 const Sale = require('../models/sale');
 
 const { addCashBack } = require('./addCashBack');
+const { cpfValidate } = require('./utils');
 
 const listPurchases = async (body) => {
-  if (!body.cpf) {
+  const { cpf } = body;
+  if (!cpf) {
     return { error: { message: 'Insira um cpf para listar as compras!' } };
   }
 
-  const sales = await Sale.find(body, {
+  const cpfValid = cpfValidate(cpf);
+  if (cpfValid.error) {
+    return { error: cpfValid.error };
+  }
+  const sales = await Sale.find({ cpfValid }, {
     idProduct: 1,
     price: 1,
     status: 1,
