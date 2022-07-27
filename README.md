@@ -163,5 +163,4 @@ curl --request GET \
     - "eslint-plugin-import": "^2.26.0",
     - "nock": "^13.2.9",
     - "nodemon": "^2.0.19",
-    - "pino-pretty": "^8.1.0",
-    - "prettier": "^2.7.1"
+    - "pino-pretty": "^8.1.0"
