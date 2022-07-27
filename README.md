@@ -41,7 +41,7 @@ npm run teste
 
 ## Autenticação
 
-A aplicação utiliza autenticação `JWT` para consumir os endpoints protegidos é necessário um `Access Token` gerado no endpoint. O token tem 1h de duração podendo ser modificado nas variaveis de ambiente `EXPIREDTOKEN`.
+A aplicação utiliza autenticação `JWT`, para consumir os endpoints protegidos é necessário um `Access Token` gerado no endpoint. O token tem 30 minutos de duração, podendo ser modificado nas variaveis de ambiente `EXPIREDTOKEN`.
 
 Para obter um token (por exemplo, com cURL):
 

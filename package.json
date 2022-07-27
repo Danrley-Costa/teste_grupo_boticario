@@ -16,18 +16,13 @@
         "ajv": "^8.11.0",
         "ajv-formats": "^2.1.1",
         "axios": "^0.27.2",
-        "chai": "^4.3.6",
-        "chance": "^1.1.8",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
         "jsonwebtoken": "^8.5.1",
-        "mocha": "^10.0.0",
         "moment": "^2.29.4",
-        "mongoose": "^6.4.5",
         "nyc": "^15.1.0",
         "pino": "^8.3.0",
-        "pino-http": "^8.1.1",
-        "supertest": "^6.2.4"
+        "pino-http": "^8.1.1"
     },
     "devDependencies": {
         "eslint": "^8.20.0",
@@ -37,6 +32,11 @@
         "nodemon": "^2.0.19",
         "pino-pretty": "^8.1.0",
         "prettier": "^2.7.1",
-        "sinon": "^14.0.0"
+        "sinon": "^14.0.0",
+        "mongoose": "^6.4.5",
+        "mocha": "^10.0.0",
+        "supertest": "^6.2.4",
+        "chai": "^4.3.6",
+        "chance": "^1.1.8"
     }
 }
