@@ -44,4 +44,17 @@ describe('Acumulate cash back integration test', () => {
       })
       .expect(401);
   });
+
+  it('Should return 500 if it draws the retailer credits - GET: /cashback', async () => {
+    const apiGb = nocks.getApiGb({ error: 'Ops' });
+    const token = createToken('1234');
+    await supertest(app)
+      .get('/cashback')
+      .set({ 'x-acces-token': token })
+      .send({
+        cpf: '15350946056',
+      })
+      .expect(500);
+    assert.isTrue(apiGb.isDone());
+  });
 });
