@@ -7,7 +7,7 @@
         "start": "node index.js",
         "dev": "nodemon index.js",
         "prettier": "npx prettier --write --ignore-unknown .",
-        "test": "npx eslint --fix src --ext .js && mocha"
+        "test": "npx eslint --fix src --ext .js && nyc mocha"
     },
     "keywords": [],
     "author": "",
@@ -24,6 +24,7 @@
         "mocha": "^10.0.0",
         "moment": "^2.29.4",
         "mongoose": "^6.4.5",
+        "nyc": "^15.1.0",
         "pino": "^8.3.0",
         "pino-http": "^8.1.1",
         "supertest": "^6.2.4"
@@ -35,6 +36,7 @@
         "nock": "^13.2.9",
         "nodemon": "^2.0.19",
         "pino-pretty": "^8.1.0",
-        "prettier": "^2.7.1"
+        "prettier": "^2.7.1",
+        "sinon": "^14.0.0"
     }
 }

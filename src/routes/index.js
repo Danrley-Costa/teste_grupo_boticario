@@ -5,6 +5,7 @@ const {
   registerSaleController,
   getAccumulatedCashback,
   listPurchasesController,
+
 } = require('../controllers');
 const { retailerSchema, saleSchema } = require('./schemas');
 
