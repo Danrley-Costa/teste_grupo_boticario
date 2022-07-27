@@ -6,7 +6,6 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "prettier": "npx prettier --write --ignore-unknown .",
         "test": "npx eslint --fix src --ext .js && nyc mocha"
     },
     "keywords": [],
