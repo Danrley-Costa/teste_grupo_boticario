@@ -10,13 +10,13 @@ const getAccumulatedCashback = async (req, res) => {
     if (verifyAuth(token)) {
       const { data, error } = await getCahsBackAPI(cpf);
       if (error) {
-        logger.error('Error get cashback:', error);
+        logger.error('Error get cashback: %j', error);
         return res.status(401).json(error);
       }
       return res.status(200).json(data.body);
     }
   } catch (error) {
-    logger.error('Error get cashback:', error);
+    logger.error('Error get cashback: %j', error);
     return res.status(500).json(error);
   }
 };

@@ -12,10 +12,10 @@ const createRetailerController = async (req, res) => {
   } catch (err) {
     if (err.code === 11000) {
       const errorMessage = 'Já existe um CPF ou Email cadastrado para esse usuario!';
-      logger.error('Error create retailer:', errorMessage);
+      logger.error('Error create retailer: %j', errorMessage);
       return res.status(400).json(errorMessage);
     }
-    logger.error('Error create retailer:', err);
+    logger.error('Error create retailer:  %s', err);
     return res.status(500).json(err);
   }
 };

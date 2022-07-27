@@ -10,14 +10,14 @@ const registerSaleController = async (req, res) => {
       const { data, error } = await createSale(idProduct, cpf, price);
 
       if (error) {
-        logger.error('Error create Sale:', error);
+        logger.error('Error create Sale: %j', error);
         return res.status(401).json(error);
       }
       return res.status(201).json(data);
     }
     return res.status(401);
   } catch (err) {
-    logger.error('Error create Sale:', err);
+    logger.error('Error create Sale: %j', err);
     res.status(500).json(err.name);
   }
 };

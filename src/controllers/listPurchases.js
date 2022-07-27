@@ -9,14 +9,14 @@ const listPurchasesController = async (req, res) => {
     if (verifyAuth(token)) {
       const { data, error } = await listPurchases(req.body);
       if (error) {
-        logger.error('Error list purchases:', error);
+        logger.error('Error list purchases: %j', error);
         return res.status(401).json(error);
       }
       return res.status(200).json(data);
     }
     return res.status(401);
   } catch (err) {
-    logger.error('Error list purchases:', err);
+    logger.error('Error list purchases: %s', err);
     return res.status(500).json(err.name);
   }
 };
