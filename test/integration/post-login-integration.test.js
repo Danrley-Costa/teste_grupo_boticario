@@ -1,11 +1,13 @@
 const supertest = require('supertest');
 const { assert } = require('chai');
+const sinon = require('sinon');
 const server = require('../../src/server');
 const { dropCollection } = require('../../database/config');
 const Retailer = require('../../src/models/retailer');
 const newRetailer = require('../fixture/createRetailer');
 
 let app;
+const sandbox = sinon.createSandbox();
 
 describe('Login integration test', () => {
   before(async () => {
@@ -19,6 +21,7 @@ describe('Login integration test', () => {
 
   afterEach(async () => {
     dropCollection('retailers');
+    sandbox.restore();
   });
 
   it('Should return 200 if login is successful - POST: /login', async () => {
@@ -41,5 +44,16 @@ describe('Login integration test', () => {
       })
       .expect(401);
     assert.strictEqual(_body, 'Usuario ou senha invalido!');
+  });
+
+  it('Should return 500 if login is error internal - POST: /login', async () => {
+    sandbox.stub(Retailer, 'findOne').throws(new Error('Opss'));
+    await supertest(app)
+      .post('/login')
+      .send({
+        user: newRetailer.name,
+        password: newRetailer.password,
+      })
+      .expect(500);
   });
 });
