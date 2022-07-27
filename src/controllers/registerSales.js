@@ -17,7 +17,7 @@ const registerSaleController = async (req, res) => {
     }
     return res.status(401);
   } catch (err) {
-    logger.error('Error create Sale: %j', err);
+    logger.error('Error create Sale: %s', err);
     res.status(500).json(err.name);
   }
 };
