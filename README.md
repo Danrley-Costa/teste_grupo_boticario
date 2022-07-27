@@ -154,6 +154,7 @@ curl --request GET \
     - "mocha": "^10.0.0",
     - "moment": "^2.29.4",
     - "mongoose": "^6.4.5",
+    - "nyc": "^15.1.0",
     - "pino": "^8.3.0",
     - "pino-http": "^8.1.1",
     - "supertest": "^6.2.4"
