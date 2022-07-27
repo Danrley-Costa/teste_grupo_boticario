@@ -27,7 +27,7 @@ Para instalar as dependencias de seu projeto você deve rodar o comando abaixo:
 npm i
 ```
 
-iniciar a aplicação:
+Iniciar a aplicação:
 
 ```bash
 npm start
@@ -76,7 +76,7 @@ curl --request POST \
 
 ```
 
-fazer login para obter um token:
+Fazer login para obter um token:
 
 ```bash
 
