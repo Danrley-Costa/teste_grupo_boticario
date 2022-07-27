@@ -13,13 +13,19 @@ git clone https://github.com/Danrley-Costa/teste_grupo_boticario.git
 
 ## Execução
 
-Para executar o projeto você irá precisar do docker e um container do mongodb ou pode alterar as variaveis de ambiente para um cluster do atlas.
+Para executar o projeto você irá precisar do docker e um container do mongodb ou pode alterar as `variaveis de ambiente` para um cluster do atlas.
+
+```bash
+URL_DB="<<URL de acesso ao banco>>"
+URL_DB_TEST="<<URL de acesso ao banco>>"
+```
 
 Para instalar o container do mongodb use:
 
 ```bash
 docker-compose up -d
 ```
+
 
 Para instalar as dependencias de seu projeto você deve rodar o comando abaixo:
 
