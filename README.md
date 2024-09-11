@@ -1,4 +1,4 @@
-# Teste Grupo Boticario
+CachBack
 
 Cashback quer dizer “dinheiro de volta”, e funciona de forma simples: o revendedor faz uma
 compra e seu benefício vem com a devolução de parte do dinheiro gasto no mês seguinte.
